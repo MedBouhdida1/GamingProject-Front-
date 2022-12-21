@@ -1,0 +1,12 @@
+require('./jquery');
+require('./jquery-ui');
+require('./bootstrap');
+require('./fontawesome');
+require('./plugin/slick');
+require('./plugin/jquery.nice-select');
+require('./plugin/counter');
+require('./plugin/waypoint');
+require('./plugin/jquery.magnific-popup');
+require('./plugin/wow');
+require('./plugin/plugin');
+require('./main');
