@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BecomecoachComponent } from './becomecoach/becomecoach.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ReservecoachComponent } from './reservecoach/reservecoach.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,11 +28,14 @@ import { ReservecoachComponent } from './reservecoach/reservecoach.component';
     ContactComponent,
     BecomecoachComponent,
     AboutusComponent,
-    ReservecoachComponent
+    ReservecoachComponent,
+
+
   ],
   imports: [
     CommonModule,
-    ClientRoutingModule
+    ClientRoutingModule,
+    FormsModule,
   ]
 })
 export class ClientModule {

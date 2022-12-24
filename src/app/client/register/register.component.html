@@ -4,7 +4,7 @@
             <div class="top-area pt-4 mb-30">
                 <div class="row d-flex align-items-center">
                     <div class="col-sm-5 col">
-                        <a class="back-home" routerLink="/home">
+                        <a class="back-home" routerLink="/client/home">
                             <img src="assets/images/icon/left-icon.png" alt="image">
                             Back To Egamlio
                         </a>
@@ -24,49 +24,40 @@
                                 <h4>Create Account</h4>
                                 <p>Sign Up to Egamlio and Start Learning!</p>
                             </div>
-                            <form action="#">
+                            <form>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="single-input">
                                             <label for="email">Email Address</label>
                                             <div class="input-box">
-                                                <input type="text" id="email" placeholder="Enter Your Email">
+                                                <input type="text" id="email" placeholder="Enter Your Email"
+                                                    name="Email" [(ngModel)]="client.Email">
                                             </div>
                                         </div>
                                         <div class="single-input">
-                                            <label for="name">User Name</label>
+                                            <label for="name">First Name</label>
                                             <div class="input-box">
-                                                <input type="text" id="name" placeholder="Enter User Name">
+                                                <input type="text" id="name" placeholder="Enter User First Name"
+                                                    [(ngModel)]="client.FirstName" name="FirstName">
+                                            </div>
+                                        </div>
+                                        <div class="single-input">
+                                            <label for="name">Last Name</label>
+                                            <div class="input-box">
+                                                <input type="text" id="name" placeholder="Enter User First Name"
+                                                    [(ngModel)]="client.LastName" name="LastName">
                                             </div>
                                         </div>
                                         <div class="single-input">
                                             <label for="passInput">Password</label>
                                             <div class="input-box">
-                                                <input type="text" id="passInput" placeholder="Enter Your Password">
+                                                <input type="text" id="passInput" placeholder="Enter Your Password"
+                                                    [(ngModel)]="client.Password" name="Password">
                                                 <img class="showPass" src="assets/images/icon/show-hide.png" alt="icon">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="single-input">
-                                        <label>Date of Birth</label>
-                                        <div class="select-area gap-3 d-flex align-items-center">
-                                            <select>
-                                                <option value="1">Date</option>
-                                                <option value="2">01</option>
-                                                <option value="3">02</option>
-                                            </select>
-                                            <select>
-                                                <option value="1">Month</option>
-                                                <option value="2">01</option>
-                                                <option value="3">02</option>
-                                            </select>
-                                            <select>
-                                                <option value="1">Years</option>
-                                                <option value="2">01</option>
-                                                <option value="3">02</option>
-                                            </select>
-                                        </div>
-                                    </div>
+
                                     <div class="remember-me">
                                         <label class="checkbox-single d-flex align-items-center">
                                             <span class="left-area">
@@ -84,7 +75,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                <button class="cmn-btn mt-40 w-100">Sign Up</button>
+                                <button class="cmn-btn mt-40 w-100" (click)="register()">Sign Up</button>
                             </form>
                             <div class="reg-with">
                                 <div class="or">
@@ -101,7 +92,7 @@
                             </div>
                         </div>
                         <div class="account mt-30">
-                            <p>Have an account? <a href="login.html">login</a></p>
+                            <p>Have an account? <a routerLink="/client/login">login</a></p>
                         </div>
                     </div>
                 </div>

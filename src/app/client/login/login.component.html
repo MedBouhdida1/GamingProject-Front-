@@ -4,7 +4,7 @@
             <div class="top-area pt-4 mb-30">
                 <div class="row d-flex align-items-center">
                     <div class="col-sm-5 col">
-                        <a class="back-home" routerLink="/home">
+                        <a class="back-home" routerLink="/client/home">
                             <img src="assets/images/icon/left-icon.png" alt="image">
                             Back To Egamlio
                         </a>
@@ -30,13 +30,15 @@
                                         <div class="single-input">
                                             <label for="email">Email Address</label>
                                             <div class="input-box">
-                                                <input type="text" id="email" placeholder="Enter Your Email">
+                                                <input type="text" id="email" placeholder="Enter Your Email"
+                                                    [(ngModel)]="client.Email" name="Email">
                                             </div>
                                         </div>
                                         <div class="single-input">
                                             <label for="passInput">Password</label>
                                             <div class="input-box">
-                                                <input type="text" id="passInput" placeholder="Enter Your Password">
+                                                <input type="text" id="passInput" placeholder="Enter Your Password"
+                                                    [(ngModel)]="client.Password" name="Password">
                                                 <img class="showPass" src="assets/images/icon/show-hide.png" alt="icon">
                                             </div>
                                         </div>
@@ -56,7 +58,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="cmn-btn mt-40 w-100">Login</button>
+                                <button class="cmn-btn mt-40 w-100" (click)="login()">Login</button>
                             </form>
                             <div class="reg-with">
                                 <div class="or">
@@ -73,7 +75,7 @@
                             </div>
                         </div>
                         <div class="account mt-30">
-                            <p>Don't have an account? <a href="register.html">Sign Up Here</a></p>
+                            <p>Don't have an account? <a routerLink="/client/register">Sign Up Here</a></p>
                         </div>
                     </div>
                 </div>
