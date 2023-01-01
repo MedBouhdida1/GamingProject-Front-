@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
 import { Client } from 'src/app/Models/client.model';
-import { CrudService } from 'src/app/Services/crud.service';
+import { ClientService } from '../Services/client.service';
 
 @Component({
   selector: 'app-register',
@@ -18,14 +18,14 @@ export class RegisterComponent implements OnInit {
   constructor(
 
     private router: Router,
-    private service: CrudService,
+    private service: ClientService,
     private toast: NgToastService
   ) { }
 
 
 
   register() {
-    if (this.client.FirstName == '' || this.client.LastName == '' || this.client.Email == '' || this.client.Password == '') {
+    if (this.client.firstName == '' || this.client.lastName == '' || this.client.email == '' || this.client.password == '') {
       this.toast.error({
         detail: "Fields required"
       })

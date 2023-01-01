@@ -1,0 +1,139 @@
+<app-navbar></app-navbar>
+<section class="banner-section inner-banner coaching coaching-details">
+    <div class="overlay">
+        <div class="banner-content">
+        </div>
+    </div>
+</section>
+<section class="coaching-details-second">
+    <div class="overlay pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="head-items">
+                        <div class="left-profile">
+                            <div class="profile-img d-flex justify-content-between">
+                                <img src="assets/images/author-profile-2.png" class="max-un" alt="image">
+                            </div>
+                            <div class="text-area">
+                                <h4>Jaydon Curtis</h4>
+                                <ul>
+                                    <li>
+                                        <img src="assets/images/icon/check-3.png" alt="icon">
+                                        <span>Upload profile picture (IRL picture required)</span>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right-profile">
+                            <a href="booking-details-2.html" class="cmn-btn">Upload picture</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-area mt-60">
+                <div class="section-text">
+                    <h5 class="mb-2">Coaching request</h5>
+                </div>
+                <div class="row card-items d-flex justify-content-center">
+                    <div class="col-xl-9 col-lg-8">
+                        <form>
+                            <div class="radio-area">
+                                <div class="radio-style">
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="single-input">
+                                                <label for="cnumber">ID discord</label>
+                                                <input [(ngModel)]="demande.discordId" name="discordId" type="text"
+                                                    id="cnumber" placeholder="1234 1234 1234 1234">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="single-input">
+                                                <label for="cardname">Are u part of a known team? If yes which
+                                                    one</label>
+                                                <input [(ngModel)]="demande.team" name="team" type="text" id="cardname"
+                                                    placeholder="Enter Your Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="single-input">
+                                                <label for="carddate">ID in game : Depending on the game, indicate your
+                                                    PSN, your BattleTag, your link to steam profile,
+                                                    your username...
+                                                </label>
+                                                <input [(ngModel)]="demande.idInGame" name="idInGame" type="text"
+                                                    id="carddate" placeholder="DD/MM/YY">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="single-input">
+                                                <label for="cvc">Rank in game</label>
+                                                <input [(ngModel)]="demande.rankInGame" name="rankInGame" type="text"
+                                                    id="cvc" placeholder="....">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="single-input">
+                                                <label for="cvc">Location</label>
+                                                <input [(ngModel)]="demande.location" name="location" type="text"
+                                                    id="cvc" placeholder="....">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+
+                                        <div class="single-input">
+                                            <label for="cvc">What game do you want to become a coach on?</label>
+                                            <input [(ngModel)]="demande.game" name="game" type="text" id="cvc"
+                                                placeholder="....">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 text-center mt-40">
+                                    <button class="cmn-btn" (click)="sendrequest()">Send request</button>
+                                </div>
+
+
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <div class="col-xl-3 col-lg-4 col-md-7 col-sm-9">
+                        <div class="payment time-info">
+                            <h6 class="m-2">Choose game to coach</h6>
+                            <select>
+                                <option value="1">League of legends</option>
+                                <option value="2">Fortnite</option>
+                                <option value="3">Valorant</option>
+                            </select>
+                        </div> -->
+                    <!-- <div class="total-prize time-info text-center">
+                            <p class="mdr">Total Price</p>
+                            <h4>$255.00</h4>
+                            <label class="save">
+                                <input class="check" type="checkbox" autocomplete="none">
+                                <span class="mdr">Save Payment Method</span>
+                            </label>
+                            <div class="btn-area mt-30">
+                                <a href="javascript:void(0)" class="cmn-btn">Pay $255.00</a>
+                            </div>
+                        </div>
+                        <div class="protection d-flex align-items-start">
+                            <img src="assets/images/icon/protection.png" class="max-un" alt="icon">
+                            <p class="mdr">For your own protection and for egamlio to assist in any potential
+                                disputes, it's important that you never make any payments outside of the platform.
+                            </p>
+                        </div> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Coaching Details end -->
+
+
+
+<app-footer></app-footer>

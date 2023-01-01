@@ -1,7 +1,6 @@
-import { achatService } from "./achatService.model";
 import { Demande } from "./Demande.model";
 
-export class Client {
+export class Coach {
 
     constructor(
 
@@ -10,8 +9,7 @@ export class Client {
         public lastName?: string,
         public email?: string,
         public password?: string,
-        public demande?: Demande,
-        public achatService: achatService[] = []
+        public demandes?: Demande[]
 
     ) {
 

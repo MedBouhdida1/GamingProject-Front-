@@ -15,6 +15,8 @@ import { BecomecoachComponent } from './becomecoach/becomecoach.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ReservecoachComponent } from './reservecoach/reservecoach.component';
 import { FormsModule } from '@angular/forms';
+import { DemandeCoachingComponent } from './demande-coaching/demande-coaching.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -29,13 +31,17 @@ import { FormsModule } from '@angular/forms';
     BecomecoachComponent,
     AboutusComponent,
     ReservecoachComponent,
+    DemandeCoachingComponent,
+
 
 
   ],
   imports: [
+
     CommonModule,
     ClientRoutingModule,
     FormsModule,
+    NgSelectModule
   ]
 })
 export class ClientModule {
