@@ -133,7 +133,8 @@
                 <div class="col-lg-12 text-center mt-40">
                     <a routerLink="/client/demandecoaching" class="cmn-btn" *ngIf="role=='Coach';else becomecoach2">Add
                         Game Coaching</a>
-                    <ng-template #becomecoach2>Apply to Coach</ng-template>
+                    <ng-template #becomecoach2><a routerLink="/client/demandecoaching" class="cmn-btn" >
+                      Apply to Coach</a></ng-template>
                 </div>
             </div>
         </div>

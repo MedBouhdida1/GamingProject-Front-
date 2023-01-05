@@ -41,6 +41,11 @@ export class ListRequestsComponent implements OnInit {
         })
       })
     }
+    localStorage.removeItem('Token')
+    setTimeout(() => {
+      location.reload();
+    }, 500);
+
 
   }
   // toastmsg(messgae: string) {

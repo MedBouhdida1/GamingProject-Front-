@@ -45,10 +45,14 @@
                                 </div>
                             </div>
                             <li class="nav-item dropdown main-navbar">
-                                <a class="nav-link " href="javascript:void(0)" data-bs-toggle="dropdown"
-                                    data-bs-auto-close="outside" routerLink="/client/becomecoach"
-                                    *ngIf="role=='Coach';else becomecoach">Add Game Coaching</a>
-                                <ng-template #becomecoach>Become Coach</ng-template>
+                              <a class="nav-link " href="javascript:void(0)" data-bs-toggle="dropdown"
+                              data-bs-auto-close="outside" routerLink="/client/becomecoach"
+                              *ngIf="role=='Coach';else becomecoach">Add Game Coaching</a>
+
+                                    <ng-template #becomecoach ><a class="nav-link " href="javascript:void(0)" data-bs-toggle="dropdown"
+                                      data-bs-auto-close="outside" routerLink="/client/becomecoach"
+                                      >Become Coach</a>
+                                  </ng-template>
 
                             </li>
 
