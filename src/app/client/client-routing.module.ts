@@ -3,8 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { BecomecoachComponent } from './becomecoach/becomecoach.component';
 import { CoachdetailsComponent } from './coachdetails/coachdetails.component';
+import { CoachesComponent } from './coaches/coaches.component';
 import { CoachingComponent } from './coaching/coaching.component';
 import { ContactComponent } from './contact/contact.component';
+import { DemandeCoachingComponent } from './demande-coaching/demande-coaching.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -20,6 +22,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutusComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'demandecoaching', component: DemandeCoachingComponent },
+  { path: 'coaches', component: CoachesComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 
 ];

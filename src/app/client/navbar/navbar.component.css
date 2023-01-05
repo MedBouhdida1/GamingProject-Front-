@@ -1,5 +1,25 @@
-
 ul li {
     margin-right: 10px;
 
+}
+
+.img-profile {
+    margin-left: 0px !important;
+}
+
+.rounded-circle {
+    margin-right: 20px;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    background-color: black;
+}
+
+.nav-item:hover {
+    cursor: pointer;
 }

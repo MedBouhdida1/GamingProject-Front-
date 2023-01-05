@@ -2,7 +2,7 @@ $(function ($) {
   "use strict";
 
   jQuery(document).ready(function () {
-    
+
     // preloader
     $("#preloader").delay(300).animate({
       "opacity": "0"
@@ -27,21 +27,21 @@ $(function ($) {
     });
 
     // Navbar Dropdown
-    var dropdown_menu = $(".header-section .dropdown-menu");
-    $(window).resize(function () {
-      if ($(window).width() < 992) {
-        dropdown_menu.removeClass('show');
-      }
-      else {
-        dropdown_menu.addClass('show');
-      }
-    });
-    if ($(window).width() < 992) {
-      dropdown_menu.removeClass('show');
-    }
-    else {
-      dropdown_menu.addClass('show');
-    }
+    // var dropdown_menu = $(".header-section .dropdown-menu");
+    // $(window).resize(function () {
+    //   if ($(window).width() < 992) {
+    //     dropdown_menu.removeClass('show');
+    //   }
+    //   else {
+    //     dropdown_menu.addClass('show');
+    //   }
+    // });
+    // if ($(window).width() < 992) {
+    //   dropdown_menu.removeClass('show');
+    // }
+    // else {
+    //   dropdown_menu.addClass('show');
+    // }
 
     // Coaching Active
     var bagetoggle = $(".bage-head");
@@ -54,14 +54,14 @@ $(function ($) {
     });
 
     // Autocomplete off
-    $('input').attr('autocomplete','off');
+    $('input').attr('autocomplete', 'off');
 
     // Range Value
-    $( ".irs-handle" ).mouseenter(function() {
-      var min_val = $( '.irs-from' ).text();
-      var max_val = $( '.irs-to' ).text();
-      $( ".min-val" ).html( min_val );
-      $( ".max-val" ).html( max_val );
+    $(".irs-handle").mouseenter(function () {
+      var min_val = $('.irs-from').text();
+      var max_val = $('.irs-to').text();
+      $(".min-val").html(min_val);
+      $(".max-val").html(max_val);
     });
 
     // grid and list style
@@ -81,14 +81,14 @@ $(function ($) {
       $("#list").addClass("active");
       $("#grid").removeClass("active");
     });
-    
+
     // Password Show Hide
-    $('.showPass').on('click', function(){
-      var passInput=$("#passInput");
-      if(passInput.attr('type')==='password'){
-        passInput.attr('type','text');
-      }else{
-        passInput.attr('type','password');
+    $('.showPass').on('click', function () {
+      var passInput = $("#passInput");
+      if (passInput.attr('type') === 'password') {
+        passInput.attr('type', 'text');
+      } else {
+        passInput.attr('type', 'password');
       }
     })
 
@@ -132,6 +132,6 @@ $(function ($) {
     $(replybtn).on('click', function () {
       $(this).next().slideToggle('slow');
     });
-    
+
   });
 });

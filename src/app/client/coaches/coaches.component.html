@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+<section class="banner-section inner-banner coach dashboard">
+    <div class="overlay">
+        <div class="banner-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10">
+                        <div class="main-content">
+                            <h2>Coaches List</h2>
+                            <div class="breadcrumb-area">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb d-flex align-items-center">
+                                        <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:void(0)">Coaches</a></li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dashboard-section">
+    <div class="overlay pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="single-content">
+
+                        <div class="main-content table-area">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Photo</th>
+                                            <th scope="col">Full Name</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Games</th>
+                                            <th scope="col">Services</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let coach of coaches">
+                                            <td></td>
+                                            <td>{{coach.firstName}} {{coach.lastName}}</td>
+                                            <td>{{coach.email}}</td>
+
+                                            <td>
+                                                <p *ngFor="let demande of coach.demandes">{{demande.game}} </p>
+                                            </td>
+                                            <td> </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>
