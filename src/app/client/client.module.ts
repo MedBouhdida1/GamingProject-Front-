@@ -17,6 +17,7 @@ import { ReservecoachComponent } from './reservecoach/reservecoach.component';
 import { FormsModule } from '@angular/forms';
 import { DemandeCoachingComponent } from './demande-coaching/demande-coaching.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { CoachesComponent } from './coaches/coaches.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     AboutusComponent,
     ReservecoachComponent,
     DemandeCoachingComponent,
+    CoachesComponent,
 
 
 

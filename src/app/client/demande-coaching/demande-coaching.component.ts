@@ -5,6 +5,7 @@ import { NgToastService } from 'ng-angular-popup';
 import { Client } from 'src/app/Models/client.model';
 import { Demande } from 'src/app/Models/Demande.model';
 import { ClientService } from '../Services/client.service';
+import * as saveAs from 'file-saver';
 
 @Component({
   selector: 'app-demande-coaching',

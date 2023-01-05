@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   token: any;
   helper = new JwtHelperService()
   User = new Coach() || new Client()
+  role?: string
 
   constructor(
     private router: Router,
@@ -34,8 +35,9 @@ export class NavbarComponent implements OnInit {
     if (this.token != null) {
       let decodeToken = this.helper.decodeToken(this.token);
       let UserEmail = decodeToken.Email
-      console.log(decodeToken.Role)
-      if (decodeToken.Role == "Client") {
+      this.role = decodeToken.Role
+      console.log(this.role)
+      if (this.role == "Client") {
         this.service.getClientByEmail(UserEmail).subscribe(data => {
           this.User = data
           console.log(this.User)
