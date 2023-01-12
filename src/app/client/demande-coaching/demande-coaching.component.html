@@ -44,6 +44,55 @@
 
                                     <div class="row">
                                         <div class="col-12">
+
+                                            <div class="single-input">
+                                                <label for="cvc">What game do you want to become a coach on?</label>
+                                                <!-- <input [(ngModel)]="demande.game" name="game" type="text" id="cvc"
+                                                    placeholder="...."> -->
+                                                <div class="radio-area mb-40">
+                                                    <div class="radio-style">
+                                                        <label class="single-radio active">
+                                                            <input type="radio" name="payment" value="League of Legends"
+                                                                [(ngModel)]="demande.game">
+                                                            <span>League of Legends</span>
+
+                                                            <span class="checkmark"></span>
+                                                            <span class="card-area">
+                                                                <img src="assets/images/league.jpg" width="100px"
+                                                                    alt="icon">
+                                                            </span>
+                                                        </label>
+                                                    </div><br>
+                                                    <div class="radio-style">
+                                                        <label class="single-radio">
+                                                            <input type="radio" name="payment" value="Valorant"
+                                                                [(ngModel)]="demande.game">
+                                                            <span>Valorant</span>
+
+                                                            <span class="checkmark"></span>
+                                                            <span class="card-area">
+                                                                <img src="assets/images/valorant.jpg" width="100px"
+                                                                    alt="icon">
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio-style">
+                                                        <label class="single-radio">
+                                                            <input type="radio" name="payment" value="Fortnite"
+                                                                [(ngModel)]="demande.game">
+                                                            <span>Fortnite</span>
+
+                                                            <span class="checkmark"></span>
+                                                            <span class="card-area">
+                                                                <img src="assets/images/fortnite.jpg" width="100px"
+                                                                    alt="icon">
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
                                             <div class="single-input">
                                                 <label for="cnumber">ID discord</label>
                                                 <input [(ngModel)]="demande.discordId" name="discordId" type="text"
@@ -55,7 +104,7 @@
                                                 <label for="cardname">Are u part of a known team? If yes which
                                                     one</label>
                                                 <input [(ngModel)]="demande.team" name="team" type="text" id="cardname"
-                                                    placeholder="Enter Your Name">
+                                                    placeholder="Enter Your Team Name">
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -65,32 +114,25 @@
                                                     your username...
                                                 </label>
                                                 <input [(ngModel)]="demande.idInGame" name="idInGame" type="text"
-                                                    id="carddate" placeholder="ex: 7dida 123">
+                                                    id="carddate" placeholder="Enter Your ID In Game">
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="single-input">
                                                 <label for="cvc">Rank in game</label>
                                                 <input [(ngModel)]="demande.rankInGame" name="rankInGame" type="text"
-                                                    id="cvc" placeholder="....">
+                                                    id="cvc" placeholder="Enter Your Rank In Game">
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="single-input">
                                                 <label for="cvc">Location</label>
                                                 <input [(ngModel)]="demande.location" name="location" type="text"
-                                                    id="cvc" placeholder="....">
+                                                    id="cvc" placeholder="Enter Your Location">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12">
 
-                                        <div class="single-input">
-                                            <label for="cvc">What game do you want to become a coach on?</label>
-                                            <input [(ngModel)]="demande.game" name="game" type="text" id="cvc"
-                                                placeholder="....">
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="col-lg-12 text-center mt-40">
                                     <button class="cmn-btn" (click)="sendrequest()">Send request</button>
