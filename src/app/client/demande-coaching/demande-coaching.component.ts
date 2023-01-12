@@ -41,6 +41,7 @@ export class DemandeCoachingComponent implements OnInit {
 
 
   async sendrequest() {
+    console.log(this.demande.game)
     this.token = localStorage.getItem("Token")
     let decodeToken = this.helper.decodeToken(this.token);
     let role = decodeToken.Role
