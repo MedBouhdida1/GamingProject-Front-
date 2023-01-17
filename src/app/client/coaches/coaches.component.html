@@ -54,7 +54,9 @@
                                             <td>{{coach.email}} </td>
 
                                             <td>
-                                                <p *ngFor="let demande of coach.demandes">{{demande.game}} </p>
+                                                <p *ngFor="let demande of coach.demandes">
+                                                    <span *ngIf="demande.etat==1">{{demande.game}}</span>
+                                                </p>
                                             </td>
                                             <td></td>
                                         </tr>
