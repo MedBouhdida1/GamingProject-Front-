@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { Client } from 'src/app/Models/client.model';
 import { Coach } from 'src/app/Models/Coach.model';
 import { Demande } from 'src/app/Models/Demande.model';
-
+import { Admin } from 'src/app/Models/admin.model';
 
 const httpOption = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -16,6 +16,7 @@ const httpOption = {
 export class AdminService {
 
 
+//https://localhost:7256/api/admin/login
 
   apiUrl = "https://localhost:7256/api"
 
@@ -25,7 +26,9 @@ export class AdminService {
   ) { }
 
 
-
+  loginAdmin(admin: Admin) {
+    return this.http.post<any>(this.apiUrl+"/admin/login", admin);
+  }
 
   getClients(): Observable<Client[]> {
     return this.http.get<Client[]>(this.apiUrl + "/client")

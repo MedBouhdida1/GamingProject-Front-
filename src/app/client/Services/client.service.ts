@@ -58,6 +58,14 @@ export class ClientService {
   getCoachs(): Observable<Coach[]> {
     return this.http.get<Coach[]>(this.apiUrl + "/coach")
   }
+
+
+
+  getCoachDetails(a: string){
+
+    return this.http.get<any>(this.apiUrl+"/coach/"+a);
+}
+
   AddServiceByCoachId(service: Service, coachId: number) {
     const URL = `${this.apiUrl + "/service/add"}/${coachId}`
     return this.http.post<any>(URL, service);

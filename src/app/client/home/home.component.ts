@@ -1,4 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AdminService } from 'src/app/admin/Service/admin.service';
+import { Admin } from 'src/app/Models/admin.model';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +10,10 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   ]
 })
 export class HomeComponent {
+
+
+  constructor() {
+  }
 
 
 

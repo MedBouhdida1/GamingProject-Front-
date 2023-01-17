@@ -41,6 +41,9 @@ export class NavbarComponent implements OnInit {
         this.service.getClientByEmail(UserEmail).subscribe(data => {
           this.User = data
           console.log(this.User)
+          console.log("idddddddddddddddd: "+this.User.id);
+          localStorage.removeItem("coachId");
+
 
         })
       }
@@ -48,6 +51,8 @@ export class NavbarComponent implements OnInit {
         this.service.getCoachByEmail(UserEmail).subscribe(data => {
           this.User = data
           console.log(this.User)
+//          console.log("idddddddddddddddd: "+typeof(this.User.id));
+          localStorage.setItem("coachId",""+this.User.id)
         })
       }
 
