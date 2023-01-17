@@ -17,7 +17,10 @@
                                         <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
                                         <li class="breadcrumb-item active" aria-current="page"
                                             *ngIf="role=='Coach'else becomecoach1">Add Game Coaching</li>
-                                        <ng-template #becomecoach1>Become a Coach</ng-template>
+                                        <ng-template #becomecoach1>
+                                            <li class="breadcrumb-item active" aria-current="page">Become a Coach
+                                            </li>
+                                        </ng-template>
                                     </ol>
                                 </nav>
                             </div>
@@ -72,75 +75,21 @@
                     </div>
                 </div>
             </div>
+            <div class="row  justify-content-center">
+
+                <div class="col-lg-12 text-center mt-40">
+                    <a routerLink="/client/demandecoaching" class="cmn-btn" *ngIf="role=='Coach';else becomecoach2">Add
+                        Game Coaching</a>
+                    <ng-template #becomecoach2><a routerLink="/client/demandecoaching" class="cmn-btn">
+                            Apply to Coach</a></ng-template>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 <!-- Become a coach end -->
 
-<!-- How it works start -->
-<section class="how-works become-coach">
-    <div class="overlay pt-120 pb-120">
-        <div class="container wow fadeInUp">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="section-header text-center">
-                        <h5 class="sub-title">Start Making Money </h5>
-                        <h2 class="title">Selling in 3 steps.</h2>
-                        <p>Use your skills to help gamers improve and earn money easily.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row cus-mar">
-                <div class="col-md-4">
-                    <div class="single-item text-center">
-                        <div class="thumb">
-                            <img src="assets/images/icon/how-works-icon-4.png" alt="icon">
-                            <span class="xlr">01</span>
-                        </div>
-                        <div class="text-area">
-                            <h5>Create your account</h5>
-                            <p>Apply to coach and get approved.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="single-item mid text-center">
-                        <div class="thumb">
-                            <img src="assets/images/icon/how-works-icon-5.png" alt="icon">
-                            <span class="xlr">02</span>
-                        </div>
-                        <div class="text-area">
-                            <h5>Start your coach lessons</h5>
-                            <p>Accept students and earn money</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="single-item text-center">
-                        <div class="thumb">
-                            <img src="assets/images/icon/how-works-icon-6.png" alt="icon">
-                            <span class="xlr">03</span>
-                        </div>
-                        <div class="text-area">
-                            <h5>Get paid</h5>
-                            <p>Get paid every week.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-120 justify-content-center">
 
-                <div class="col-lg-12 text-center mt-40">
-                    <a routerLink="/client/demandecoaching" class="cmn-btn" *ngIf="role=='Coach';else becomecoach2">Add
-                        Game Coaching</a>
-                    <ng-template #becomecoach2><a routerLink="/client/demandecoaching" class="cmn-btn" >
-                      Apply to Coach</a></ng-template>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- How it works end -->
 
 
 

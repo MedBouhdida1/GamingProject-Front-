@@ -55,7 +55,10 @@
                                     </thead>
                                     <tbody>
                                         <tr *ngFor="let demande of demandesList">
-                                            <td>{{demande.client!.firstName}} {{demande.client!.lastName}}</td>
+                                            <td *ngIf="demande.coachId==null;else co">{{demande.client!.firstName}}
+                                                {{demande.client!.lastName}}</td>
+                                            <ng-template #co>{{demande.coach!.firstName}}
+                                                {{demande.coach!.lastName}}</ng-template>
                                             <td>{{demande.game}}</td>
                                             <td>{{demande.discordId}}</td>
                                             <td>{{demande.team}}</td>

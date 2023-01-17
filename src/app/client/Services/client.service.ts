@@ -6,6 +6,7 @@ import { JwtHelperService } from "@auth0/angular-jwt";
 import { Observable } from 'rxjs';
 import { Demande } from 'src/app/Models/Demande.model';
 import { Coach } from 'src/app/Models/Coach.model';
+import { Service } from 'src/app/Models/Service.model';
 
 const httpOption = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -56,5 +57,13 @@ export class ClientService {
 
   getCoachs(): Observable<Coach[]> {
     return this.http.get<Coach[]>(this.apiUrl + "/coach")
+  }
+  AddServiceByCoachId(service: Service, coachId: number) {
+    const URL = `${this.apiUrl + "/service/add"}/${coachId}`
+    return this.http.post<any>(URL, service);
+  }
+
+  getServices(): Observable<Service[]> {
+    return this.http.get<Service[]>(this.apiUrl + "/service")
   }
 }

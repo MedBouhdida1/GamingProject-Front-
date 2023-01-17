@@ -27,21 +27,26 @@ export class ListRequestsComponent implements OnInit {
 
   AcceptDemande(demande: Demande) {
     if (confirm("Do you want to accept this request ?")) {
-
-      this.service.AcceptDemande(demande.id!).subscribe(data => {
-        this.client = demande.client!
-        this.coach.firstName = this.client.firstName
-        this.coach.lastName = this.client.lastName
-        this.coach.email = this.client.email
-        this.coach.password = this.client.password
-        this.service.AddCoach(this.coach).subscribe(coach => {
-          console.log(coach)
-          demande.coachId = coach.id
-          this.service.updateDemande(demande.id!, demande).subscribe()
+      if (demande.coachId == null) {
+        this.service.AcceptDemande(demande.id!).subscribe(data => {
+          this.client = demande.client!
+          this.coach.firstName = this.client.firstName
+          this.coach.lastName = this.client.lastName
+          this.coach.email = this.client.email
+          this.coach.password = this.client.password
+          this.service.AddCoach(this.coach).subscribe(coach => {
+            console.log(coach)
+            demande.coachId = coach.id
+            this.service.updateDemande(demande.id!, demande).subscribe()
+          })
+          localStorage.removeItem('Token') //to force user login again to enter as coach not client
         })
-      })
+      }
+      else {
+        this.service.AcceptDemande(demande.id!).subscribe()
+      }
+
     }
-    localStorage.removeItem('Token')
     setTimeout(() => {
       location.reload();
     }, 500);
