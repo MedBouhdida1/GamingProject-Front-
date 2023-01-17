@@ -11,7 +11,7 @@ import { ListCoachsComponent } from './list-coachs/list-coachs.component';
 import { ListRequestsComponent } from './list-requests/list-requests.component';
 import { RegisterAdminComponent } from './register-admin/register-admin.component';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
-
+import {FormsModule} from '@angular/forms';
 
 // import "./../../assets/admin/"
 
@@ -26,12 +26,17 @@ import { NavigationEnd, NavigationStart, Router } from '@angular/router';
     ListCoachsComponent,
     ListRequestsComponent,
     RegisterAdminComponent,
-
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    FormsModule
+  ],
+  providers:[
+    // AdminService
+
   ]
+
 })
 export class AdminModule {
 

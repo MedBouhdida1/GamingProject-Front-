@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'coaching', component: CoachingComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'coachdetails', component: CoachdetailsComponent },
+  { path: 'coachdetails/:id', component: CoachdetailsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'becomecoach', component: BecomecoachComponent },
   { path: 'reservecoach', component: ReservecoachComponent },

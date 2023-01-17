@@ -33,8 +33,7 @@ import { CoachesComponent } from './coaches/coaches.component';
     AboutusComponent,
     ReservecoachComponent,
     DemandeCoachingComponent,
-    CoachesComponent,
-
+    CoachesComponent
 
 
   ],

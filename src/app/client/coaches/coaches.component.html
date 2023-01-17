@@ -34,6 +34,7 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
+                                           <th scope="col">id</th>
                                             <th scope="col">Photo</th>
                                             <th scope="col">Full Name</th>
                                             <th scope="col">Email</th>
@@ -42,15 +43,20 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                      <!-- href="https://localhost:7256/api/coach/2"
+                                          <a [routerLink]="['/coach', coach.id]"</a>-->
                                         <tr *ngFor="let coach of coaches">
+                                         <td>  <a [routerLink]="['/client/coachdetails',coach.id]">
+
+                                          {{coach.id}}                                        </a> </td>
                                             <td></td>
                                             <td>{{coach.firstName}} {{coach.lastName}}</td>
-                                            <td>{{coach.email}}</td>
+                                            <td>{{coach.email}} </td>
 
                                             <td>
                                                 <p *ngFor="let demande of coach.demandes">{{demande.game}} </p>
                                             </td>
-                                            <td> </td>
+                                            <td></td>
                                         </tr>
 
                                     </tbody>

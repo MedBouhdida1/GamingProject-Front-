@@ -34,6 +34,11 @@ export class LoginComponent implements OnInit {
     }
     else {
       this.service.loginClient(this.client).subscribe(res => {
+
+//console.log("hiii");
+//console.log(res);
+//console.log("hiii");
+
         let token = res.token;
         localStorage.setItem("Token", token)
         this.router.navigate(["/client/home"])
