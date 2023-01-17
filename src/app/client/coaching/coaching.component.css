@@ -1,0 +1,16 @@
+.modal-body p,
+.modal-title,
+.form-group label,
+textarea {
+
+    color: black;
+}
+
+a {
+    cursor: pointer;
+}
+
+.thumb img {
+    max-width: none;
+    height: 233px;
+}

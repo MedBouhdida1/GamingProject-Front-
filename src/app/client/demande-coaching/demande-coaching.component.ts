@@ -6,6 +6,7 @@ import { Client } from 'src/app/Models/client.model';
 import { Demande } from 'src/app/Models/Demande.model';
 import { ClientService } from '../Services/client.service';
 import * as saveAs from 'file-saver';
+import { Coach } from 'src/app/Models/Coach.model';
 
 @Component({
   selector: 'app-demande-coaching',
@@ -17,6 +18,7 @@ export class DemandeCoachingComponent implements OnInit {
   helper = new JwtHelperService()
   token: any
   user = new Client()
+  coach = new Coach()
   constructor(
     private router: Router,
     private toast: NgToastService,
@@ -55,6 +57,30 @@ export class DemandeCoachingComponent implements OnInit {
           return;
         }
         this.demande.clientId = this.user.id
+        await this.service.addDemande(this.demande).toPromise();
+        this.router.navigate(["/client/home"])
+        this.toast.success({
+          detail: "Your request is being processed"
+        })
+      }
+      else {
+        this.toast.warning({
+          detail: "Fields required"
+        })
+      }
+    }
+    else if (role == "Coach") {
+      if (this.checkProperties(this.demande)) {
+        this.coach = await this.service.getCoachByEmail(decodeToken.Email).toPromise();
+        for (let index of this.coach.demandes!) {
+          if (index.game == this.demande.game) {
+            this.toast.warning({
+              detail: "You have already sent a request for this game"
+            })
+            return;
+          }
+        }
+        this.demande.coachId = this.coach.id;
         await this.service.addDemande(this.demande).toPromise();
         this.router.navigate(["/client/home"])
         this.toast.success({
