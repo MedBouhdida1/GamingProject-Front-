@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
+import { Coach } from 'src/app/Models/Coach.model';
+import { ClientService } from '../Services/client.service';
 
 @Component({
   selector: 'app-coachdetails',
@@ -7,8 +11,24 @@ import { Component } from '@angular/core';
 })
 export class CoachdetailsComponent {
 
+  coach: Coach = new Coach();
+  constructor(
+    private z: ActivatedRoute,
+    private service: ClientService,
+    private toast: NgToastService
+  ) {
 
+  }
 
+  ngOnInit(): void {
+    ;
+    this.service.getCoachDetails(this.z.snapshot.params['id']).subscribe(data => {
+      this.coach = data
+      console.log(this.coach);
+
+    })
+
+  }
 
 
 

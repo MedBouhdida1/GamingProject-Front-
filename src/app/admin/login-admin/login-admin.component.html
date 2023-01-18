@@ -1,4 +1,4 @@
-<section style="background: url(../../../assets/photos/pexels-photo-176851663a.jpg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb);background-size: cover">
+<!-- <section style="background: url(../../../assets/photos/pexels-photo-176851663a.jpg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb);background-size: cover">
     <div class="height-100-vh bg-primary-trans">
         <div class="container-fluid">
             <div class="row justify-content-center">
@@ -25,8 +25,7 @@
                                     <span class="custom-control-description">Remember me</span>
                                 </label>
                             </div>
-                            <button class="btn btn-primary mt-2">Sign In</button>
-
+                            <button class="btn btn-primary mt-2" >Sign In</button>
                             <small class="text-muted mt-5 mb-1 d-block">Don't have an account? <a href="pages_register.html">Register Now!</a></small>
                         </form>
                     </div>
@@ -36,7 +35,6 @@
     </div>
 </section>
 
-<!---Right Tray--->
 <div class="right-sidebar px-3">
     <button class="right-side-toggle"><i class="fa fa-cog fa-spin"></i></button>
 	<div class="block bg-trans" style="margin-bottom: 0">
@@ -52,7 +50,7 @@
             <li><a href="javascript:void(0)" data-laycolor="topNavigationLayout/orange"><div class="color-div" style="background: rgb(255,120,45)"><i class="fa fa-check my-auto"></i></div></a></li>
         </ul>
     </div>
-	
+
     <div class="block bg-trans">
         <div class="block-heading">
             <h5>Side Navigation</h5>
@@ -67,3 +65,37 @@
         </ul>
     </div>
 </div>
+-->
+<form class="text-center border border-light p-5">
+
+  <p class="h4 mb-4">Sign in</p>
+  <!-- Email -->
+  <input type="text"  [(ngModel)]="a.username" name="zz" class="form-control mb-4" placeholder="E-mail">
+
+  <!-- Password -->
+  <input type="password" id="defaultLoginFormPassword"  [(ngModel)]="a.password" name="zz" class="form-control mb-4" placeholder="Password">
+  <div class="d-flex justify-content-around">
+    <div>
+      <!-- Forgot password -->
+      <a href="">Forgot password?</a>
+    </div>
+  </div>
+  <!-- Sign in button -->
+  <button mdbBtn color="info" block="true" class="my-4" type="submit" (click)="show();">Sign in</button>
+  <!-- Register -->
+  <p>Not a member?
+    <a href="">Register</a>
+  </p>
+  <!-- Social login -->
+  <p>or sign in with:</p>
+  <a type="button" class="light-blue-text mx-2">
+  </a>
+  <a type="button" class="light-blue-text mx-2">
+  </a>
+  <a type="button" class="light-blue-text mx-2">
+  </a>
+  <a type="button" class="light-blue-text mx-2">
+  </a>
+</form>
+
+
