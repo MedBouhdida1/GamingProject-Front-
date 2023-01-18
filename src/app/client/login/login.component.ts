@@ -35,9 +35,9 @@ export class LoginComponent implements OnInit {
     else {
       this.service.loginClient(this.client).subscribe(res => {
 
-//console.log("hiii");
-//console.log(res);
-//console.log("hiii");
+        //console.log("hiii");
+        //console.log(res);
+        //console.log("hiii");
 
         let token = res.token;
         localStorage.setItem("Token", token)
@@ -58,6 +58,13 @@ export class LoginComponent implements OnInit {
 
   }
   ngOnInit(): void {
+    let token = localStorage.getItem("Token")
+    if (token != null) {
+      this.router.navigate(['client/home']);
+      this.toast.warning({
+        detail: "You are already loged in"
+      })
+    }
   }
 
 

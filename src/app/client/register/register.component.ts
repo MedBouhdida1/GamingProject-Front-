@@ -51,7 +51,13 @@ export class RegisterComponent implements OnInit {
 
 
   ngOnInit(): void {
-
+    let token = localStorage.getItem("Token")
+    if (token != null) {
+      this.router.navigate(['client/home']);
+      this.toast.warning({
+        detail: "You are already loged in"
+      })
+    }
   }
 
 }
