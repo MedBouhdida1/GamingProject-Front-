@@ -6,6 +6,9 @@ import { NgToastModule } from 'ng-angular-popup';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormsModule} from '@angular/forms';
+
 
 
 @NgModule({
@@ -17,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgToastModule
+    NgToastModule,
+    BrowserAnimationsModule,
+    FormsModule
 
 
   ],

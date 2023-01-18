@@ -1,0 +1,127 @@
+<app-navbar></app-navbar>
+<section class="banner-section inner-banner coaching">
+    <div class="overlay">
+        <div class="shape-area">
+            <img src="assets/images/icon/crystal.png" class="obj-1" alt="image">
+            <img src="assets/images/icon/ether.png" class="obj-2" alt="image">
+        </div>
+        <div class="banner-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-10">
+                        <div class="main-content">
+                            <h1>Services</h1>
+                            <div class="breadcrumb-area">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb d-flex align-items-center">
+                                        <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Services</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="coaching-details-second">
+    <div class="overlay pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="head-items">
+                        <div class="left-profile">
+                            <div class="profile-img d-flex justify-content-between">
+                                <img src="assets/images/author-profile-2.png" class="max-un" alt="image">
+                            </div>
+                            <div class="text-area">
+                                <p>Participant <span>-</span> 10 hours Pack With</p>
+                                <h4>Jaydon Curtis</h4>
+                                <ul>
+                                    <li>
+                                        <img src="assets/images/icon/check-3.png" alt="icon">
+                                        <span>Booking Time & Date</span>
+                                    </li>
+                                    <li>
+                                        <span class="dot">......</span>
+                                    </li>
+                                    <li>
+                                        <span class="round"></span>
+                                        <span>Payment</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right-profile">
+                            <a href="coaching-details.html" class="cmn-btn">Change</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-area mt-60">
+                <div class="section-text">
+                    <h5 class="mb-2">Booking details</h5>
+                    <p>Book sessions you wish to schedule now and save remaining for later.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h5>Inline</h5>
+                        <p-calendar [(ngModel)]="date" [inline]="true"  [showIcon]="true"></p-calendar>
+                    </div>
+                    <div class="col-lg-4">
+                        
+                        <div class="radio-area">
+                            <label class="single-radio">10:00 - 11:00 AM
+                                <input type="radio" name="loan">
+                                <span class="checkmark"></span>
+                                <a class="cmn-btn">Confirm</a>
+                            </label>
+                            <label class="single-radio">11:00 - 12:00 PM
+                                <input type="radio" name="loan">
+                                <span class="checkmark"></span>
+                                <a class="cmn-btn" >Confirm</a>
+                            </label>
+                            <label class="single-radio active">12:00 - 1:00 PM
+                                <input type="radio"  name="loan">
+                                <span class="checkmark"></span>
+                                <a class="cmn-btn" >Confirm</a>
+                            </label>
+                            <label class="single-radio">1:00 - 2:00 PM
+                                <input type="radio" name="loan">
+                                <span class="checkmark"></span>
+                                <a class="cmn-btn" >Confirm</a>
+                            </label>
+                            <label class="single-radio">2:00 - 3:00 PM
+                                <input type="radio" name="loan">
+                                <span class="checkmark"></span>
+                                <a class="cmn-btn" >Confirm</a>
+                            </label>
+                            <label class="single-radio">3:00 - 4:00 P1M
+                                <input type="radio" name="loan">
+                                <span class="checkmark"></span>
+                                
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="footer-area">
+                        <a href="coaching-details.html" class="d-flex align-items-center">
+                            <i class="icon-e-double-right-arrow"></i>
+                            PreVious
+                        </a>
+                        <div class="right-item d-flex align-items-center">
+                            <h4>$255.00 <span>(€212.4)</span></h4>
+                            <a (click)="buyService()"  class="cmn-btn">Continue</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<app-footer></app-footer>
