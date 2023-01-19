@@ -16,7 +16,7 @@ date : Date = new Date();
 token :any;
 helper = new JwtHelperService()
    constructor( private router: Router,
-    private service: ClientService,) { 
+    private service: ClientService) { 
   
    }
    ngOnInit() {
