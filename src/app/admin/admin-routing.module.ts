@@ -6,22 +6,23 @@ import { ListCoachsComponent } from './list-coachs/list-coachs.component';
 import { ListRequestsComponent } from './list-requests/list-requests.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { RegisterAdminComponent } from './register-admin/register-admin.component';
+import { AuthAdminGuard } from './Service/auth-admin.guard';
 
 const routes: Routes = [
   {
-    path: 'home', component: HomeAdminComponent
+    path: 'home', component: HomeAdminComponent, canActivate: [AuthAdminGuard]
   },
   {
     path: 'login', component: LoginAdminComponent
   },
   {
-    path: 'clients', component: ListClientsComponent
+    path: 'clients', component: ListClientsComponent, canActivate: [AuthAdminGuard]
   },
   {
-    path: 'coachs', component: ListCoachsComponent
+    path: 'coachs', component: ListCoachsComponent, canActivate: [AuthAdminGuard]
   },
   {
-    path: 'requests', component: ListRequestsComponent
+    path: 'requests', component: ListRequestsComponent, canActivate: [AuthAdminGuard]
   },
   {
     path: 'register', component: RegisterAdminComponent

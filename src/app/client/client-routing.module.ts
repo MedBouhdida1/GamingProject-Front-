@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ReservecoachComponent } from './reservecoach/reservecoach.component';
+import { AuthClientGuard } from './Services/auth-client.guard';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'coaching', component: CoachingComponent },
@@ -19,11 +20,11 @@ const routes: Routes = [
   { path: 'coachdetails/:id', component: CoachdetailsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'becomecoach', component: BecomecoachComponent },
-  { path: 'reservecoach', component: ReservecoachComponent },
+  { path: 'reservecoach', component: ReservecoachComponent, canActivate: [AuthClientGuard] },
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutusComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'demandecoaching', component: DemandeCoachingComponent },
+  { path: 'demandecoaching', component: DemandeCoachingComponent, canActivate: [AuthClientGuard] },
   { path: 'coaches', component: CoachesComponent },
   { path: 'booking/:id', component: BookingComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
