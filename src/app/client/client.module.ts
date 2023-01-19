@@ -18,7 +18,11 @@ import { FormsModule } from '@angular/forms';
 import { DemandeCoachingComponent } from './demande-coaching/demande-coaching.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { CoachesComponent } from './coaches/coaches.component';
-
+import { BookingComponent } from './booking/booking.component';
+import { PaimentComponent } from './paiment/paiment.component';
+import {CalendarModule} from 'primeng/calendar';
+import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+import {MenuItem} from 'primeng/api';  
 @NgModule({
   declarations: [
     HomeComponent,
@@ -33,7 +37,9 @@ import { CoachesComponent } from './coaches/coaches.component';
     AboutusComponent,
     ReservecoachComponent,
     DemandeCoachingComponent,
-    CoachesComponent
+    CoachesComponent,
+    BookingComponent,
+    PaimentComponent
 
 
   ],
@@ -42,7 +48,10 @@ import { CoachesComponent } from './coaches/coaches.component';
     CommonModule,
     ClientRoutingModule,
     FormsModule,
-    NgSelectModule
+    NgSelectModule,
+    CalendarModule,
+    AccordionModule
+
   ]
 })
 export class ClientModule {

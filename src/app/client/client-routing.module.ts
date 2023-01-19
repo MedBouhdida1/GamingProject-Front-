@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { BecomecoachComponent } from './becomecoach/becomecoach.component';
+import { BookingComponent } from './booking/booking.component';
 import { CoachdetailsComponent } from './coachdetails/coachdetails.component';
 import { CoachesComponent } from './coaches/coaches.component';
 import { CoachingComponent } from './coaching/coaching.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'demandecoaching', component: DemandeCoachingComponent, canActivate: [AuthClientGuard] },
   { path: 'coaches', component: CoachesComponent },
+  { path: 'booking/:id', component: BookingComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 
 ];

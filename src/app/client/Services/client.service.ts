@@ -1,3 +1,4 @@
+import { achatService } from './../../Models/achatService.model';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -73,5 +74,8 @@ export class ClientService {
 
   getServices(): Observable<Service[]> {
     return this.http.get<Service[]>(this.apiUrl + "/service")
+  }
+  buyService(achatService: achatService) {
+    return this.http.post<any>(this.apiUrl+"/achatService/buy", achatService);
   }
 }
