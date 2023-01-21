@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { DemandeCoachingComponent } from './demande-coaching/demande-coaching.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { CoachesComponent } from './coaches/coaches.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CoachesComponent } from './coaches/coaches.component';
     AboutusComponent,
     ReservecoachComponent,
     DemandeCoachingComponent,
-    CoachesComponent
+    CoachesComponent,
+    ProfileComponent
 
 
   ],
