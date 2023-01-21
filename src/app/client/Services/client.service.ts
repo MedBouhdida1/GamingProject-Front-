@@ -1,3 +1,4 @@
+import { achatService } from './../../Models/achatService.model';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -78,5 +79,8 @@ export class ClientService {
   getClientDetails(emailUser:string):Observable<Client>
   {
     return this.http.get<any>(this.apiUrl+"/client/email/"+emailUser);
+  }
+  buyService(achatService: achatService) {
+    return this.http.post<any>(this.apiUrl+"/achatService/buy", achatService);
   }
 }

@@ -20,6 +20,11 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { CoachesComponent } from './coaches/coaches.component';
 import { ProfileComponent } from './profile/profile.component';
 
+import { BookingComponent } from './booking/booking.component';
+import { PaimentComponent } from './paiment/paiment.component';
+import {CalendarModule} from 'primeng/calendar';
+import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+import {MenuItem} from 'primeng/api';  
 @NgModule({
   declarations: [
     HomeComponent,
@@ -35,16 +40,20 @@ import { ProfileComponent } from './profile/profile.component';
     ReservecoachComponent,
     DemandeCoachingComponent,
     CoachesComponent,
-    ProfileComponent
+    ProfileComponent,
+    BookingComponent,
+    PaimentComponent
 
 
   ],
   imports: [
-
     CommonModule,
     ClientRoutingModule,
     FormsModule,
-    NgSelectModule
+    NgSelectModule,
+    CalendarModule,
+    AccordionModule
+
   ]
 })
 export class ClientModule {
