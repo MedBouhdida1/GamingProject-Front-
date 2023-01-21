@@ -18,6 +18,8 @@ import { FormsModule } from '@angular/forms';
 import { DemandeCoachingComponent } from './demande-coaching/demande-coaching.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { CoachesComponent } from './coaches/coaches.component';
+import { ProfileComponent } from './profile/profile.component';
+
 import { BookingComponent } from './booking/booking.component';
 import { PaimentComponent } from './paiment/paiment.component';
 import {CalendarModule} from 'primeng/calendar';
@@ -38,13 +40,13 @@ import {MenuItem} from 'primeng/api';
     ReservecoachComponent,
     DemandeCoachingComponent,
     CoachesComponent,
+    ProfileComponent,
     BookingComponent,
     PaimentComponent
 
 
   ],
   imports: [
-
     CommonModule,
     ClientRoutingModule,
     FormsModule,

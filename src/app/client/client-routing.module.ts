@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DemandeCoachingComponent } from './demande-coaching/demande-coaching.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { ReservecoachComponent } from './reservecoach/reservecoach.component';
 import { AuthClientGuard } from './Services/auth-client.guard';
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'about', component: AboutusComponent },
   { path: 'login', component: LoginComponent },
   { path: 'demandecoaching', component: DemandeCoachingComponent, canActivate: [AuthClientGuard] },
-  { path: 'coaches', component: CoachesComponent },
+  { path: 'coaches', component: CoachesComponent,canActivate: [AuthClientGuard] },
+  { path:'profile',component:ProfileComponent,canActivate: [AuthClientGuard] },
   { path: 'booking/:id', component: BookingComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 

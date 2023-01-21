@@ -1,0 +1,219 @@
+<app-navbar></app-navbar>
+
+<section class="banner-section inner-banner coach dashboard">
+    <div class="overlay">
+        <div class="banner-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10">
+                        <div class="main-content">
+                            <h2>User Dashboard</h2>
+                            <div class="breadcrumb-area">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb d-flex align-items-center">
+                                        <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">User Dashboard</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Banner Section end -->
+
+<!-- Dashboard start -->
+<section class="dashboard-section">
+    <div class="overlay pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-3 col-lg-4 col-md-8 cus-mar">
+                    <div class="sidebar-single">
+                        <div class="profile-img">
+                            <img src="assets/images/author-profile-4.png" alt="icon">
+                        </div>
+                        <h5>{{clientProfileData.firstName}} {{clientProfileData.lastName}}</h5>
+                        <a href="javascript:void(0)" class="cmn-btn alt">Logout</a>
+                    </div>
+
+                </div>
+                <div class="col-xxl-9 col-lg-8 cus-mar">
+                    <div class="single-content">
+                        <div class="head-area d-flex align-items-center justify-content-between">
+                            <h5>PERSONAL DETAILS</h5>
+                        </div>
+                        <div class="main-content">
+                            <div class="single-box">
+                                <ul>
+                                    <li>
+                                        <span>FirstName</span>
+                                        <span>:</span>
+                                        <span>
+                                        <form *ngIf="editMod; else notInEditModFirstName" action="#">
+
+                                                <div class="single-input">
+                                                    <input type="text" id="reviewName" [(ngModel)]="clientProfileData.firstName" name="firstName" placeholder="Enter Your first name"
+                                                        autocomplete="off">
+                                                </div>
+                                        </form>
+                                    </span>
+                                        <ng-template #notInEditModFirstName> <span>{{clientProfileData.firstName}}</span> </ng-template>
+                                       
+                                    </li>
+                                    <li>
+                                        <span>LastName</span>
+                                        <span>:</span>
+
+
+                                        <span>
+                                        <form *ngIf="editMod; else notInEditModLastName" action="#">
+
+                                                <div class="single-input">
+                                                    <input type="text" id="reviewName" [(ngModel)]="clientProfileData.lastName" name="lastName" placeholder="Enter Your last name"
+                                                        autocomplete="off">
+                                                </div>
+                                        </form>
+                                    </span>
+                                        <ng-template #notInEditModLastName> <span>{{clientProfileData.lastName}}</span> </ng-template>
+                                    </li>
+                                    <li>
+                                        <span>Email Address</span>
+                                        <span>:</span>
+                                        <span>
+                                            <form *ngIf="editMod; else notInEditModEmail" action="#">
+    
+                                                    <div class="single-input">
+                                                        <input type="text" id="reviewName"[(ngModel)]="clientProfileData.email" name="email" placeholder="Enter Your Email Adress"
+                                                            autocomplete="off">
+                                                    </div>
+                                            </form>
+                                        </span>
+                                            <ng-template #notInEditModEmail> <span>{{clientProfileData.email}}</span> </ng-template>
+                                    </li>
+
+                                </ul>
+                                <a *ngIf="!editMod && !loader" href="javascript:void(0)" (click)="switchMod()"><img
+                                        src="assets/images/icon/update-btn.png" alt="icon"></a>
+                                <a *ngIf="editMod && !loader" href="javascript:void(0)" (click)="switchMod();editProfile();"><img
+                                        src="assets/images/icon/check-5.png" alt="icon"></a>
+                                        <div *ngIf="loader" class="lds-dual-ring"></div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Dashboard end -->
+
+<!-- Footer Area Start -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="newsletter">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section-area mb-30 text-center">
+                        <h5 class="sub-title">Get ready for the next level</h5>
+                        <h3 class="title">Subscribe for updates</h3>
+                    </div>
+                    <form action="#">
+                        <div class="form-group d-flex align-items-center">
+                            <img src="assets/images/icon/email.png" alt="icon">
+                            <input type="text" placeholder="Your email address">
+                            <button class="cmn-btn">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-area pt-120">
+            <div class="footer-top pb-120">
+                <div class="row">
+                    <div class="col-xl-3 col-6">
+                        <div class="footer-box">
+                            <h5>Company</h5>
+                            <ul class="footer-link">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="how-works.html">How It Works</a></li>
+                                <li><a href="careers.html">Careers</a></li>
+                                <li><a href="about-us.html">Customer Reviews</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-6">
+                        <div class="footer-box">
+                            <h5>COACHES</h5>
+                            <ul class="footer-link">
+                                <li><a href="become-coach.html">Become a Coach</a></li>
+                                <li><a href="coaches-grid-list.html">Our Coaches</a></li>
+                                <li><a href="coaches-details.html">Coach Demo</a></li>
+                                <li><a href="coaching-grid-list.html">Our Coaching</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-6">
+                        <div class="footer-box">
+                            <h5>SUPPORT</h5>
+                            <ul class="footer-link">
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="terms-conditions.html">Terms of Use</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="terms-conditions.html">Security</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-6">
+                        <div class="social">
+                            <h5>FOLLOW US</h5>
+                            <ul class="footer-link">
+                                <li><a href="javascript:void(0)">
+                                        <span><i class="fab fa-facebook-f"></i></span>
+                                        facebook
+                                    </a></li>
+                                <li><a href="javascript:void(0)">
+                                        <span><i class="fab fa-twitter"></i></span>
+                                        twitter
+                                    </a></li>
+                                <li><a href="javascript:void(0)">
+                                        <span><i class="fab fa-twitch"></i></span>
+                                        twitch
+                                    </a></li>
+                                <li><a href="javascript:void(0)">
+                                        <span><i class="fab fa-youtube"></i></span>
+                                        youtube
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start order-lg-0 order-1">
+                        <div class="copyright text-center">
+                            <p>Copyright © 2022 Egamlio | Designed by <a
+                                    href="https://themeforest.net/user/uiaxis">UIAXIS.</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="language d-flex align-items-center justify-content-center justify-content-lg-end">
+                            <h6 class="m-none">Select your language</h6>
+                            <select>
+                                <Option>English</Option>
+                                <Option>Arabic</Option>
+                                <Option>Bangla</Option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
